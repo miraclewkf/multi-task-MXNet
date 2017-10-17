@@ -1,7 +1,13 @@
 # multi-task-MXNet
 **This is the implement of the multi-task image classificaton in MXNet** 
 
-This implement doesn't need recompile MXNet and is very convenient for you to use. Firstly, I assume that you can use MXNet normally. Then I assum you want to do a 4 classes classification. **I define task 1 as the original classification and task 2 as determine whether the label is bigger than 0**. Finally, do as follows:
+This implement doesn't need recompile MXNet and is very convenient for you to use. 
+
+Firstly, I assume that you have installed and used MXNet normally. 
+
+Secondly, multi-task image classification is different from multi-label image classification both in data and model. **I assume you want to do a 4 classes classification and you want to have two tasks. I define task 1 as the original classification and task 2 as determine whether the label is bigger than 0**. 
+
+Finally, do as follows:
 
 ## Data
 Your .lst file may like this(take 4 classes as example):
@@ -17,7 +23,9 @@ Your .lst file may like this(take 4 classes as example):
 |2598	|2.000000|	image7.jpg|
 
 
-In this implement, we only use .lst and raw image as the input instead of .rec file.
+There are two example of `train_data.lst` and `val_data.lst` in `/multi-task-MXNet/data_example/`
+
+**In this implement, we only use .lst and raw image as the input instead of .rec file.**
 
 ## pretrained model
 You can download pretrained model of ResNet50 from [Google Drive](https://drive.google.com/open?id=0ByXcv9gLjrVcVkQxMVAzcklQU00).
