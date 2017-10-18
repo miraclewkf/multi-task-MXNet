@@ -4,6 +4,8 @@
 ## What's multi-task image classification
 For example, If you want to do 4 classes classification which include dog, apple, orange, bananer. On the one hand, you want your classifier to classify these four classes, on the other hand, you want your classifier to classify whether the input image is dog or not. Multi-task image classification can be used to solve this problem.
 
+
+## How to implement?
 **This implement doesn't need recompile MXNet and is very convenient for you to use.**
 
 Firstly, I assume that you have installed and used MXNet normally. 
@@ -12,7 +14,7 @@ Secondly, multi-task image classification is different from multi-label image cl
 
 Finally, do as follows:
 
-## Data
+### Data
 Your .lst file may like this(take 4 classes as example):
 
 |ID	|label   |      image_name|
@@ -30,11 +32,11 @@ There are two example of `train_data.lst` and `val_data.lst` in `/multi-task-MXN
 
 **In this implement, we only use .lst and raw image as the input instead of .rec file.**
 
-## pretrained model
+### pretrained model
 You can download pretrained model of ResNet50 from [Google Drive](https://drive.google.com/open?id=0ByXcv9gLjrVcVkQxMVAzcklQU00).
 Put this `resnet-50-0000.params` in `pretrained_model/` file.
 
-## Train
+### Train
  `train_multitask.sh` is the train script for you to start fine-tune quickly. You should open this script and change some configurations such as: --epoch, --model, --batch-size, --num-classes, --data-train, --data-val, --image-train, --image-cal, --num-examples, --lr, --gpus, --num-epoch, --save-result, --save-name.
 
 
