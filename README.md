@@ -1,7 +1,10 @@
 # multi-task-MXNet
 **This is the implement of the multi-task image classificaton in MXNet** 
 
-This implement doesn't need recompile MXNet and is very convenient for you to use. 
+## What's multi-task image classification
+For example, If you want to do 4 classes classification which include dog, apple, orange, bananer. On the one hand, you want your classifier to classify these four classes, on the other hand, you want your classifier to classify whether the input image is dog or not. Multi-task image classification can be used to solve this problem.
+
+**This implement doesn't need recompile MXNet and is very convenient for you to use.**
 
 Firstly, I assume that you have installed and used MXNet normally. 
 
@@ -29,7 +32,7 @@ There are two example of `train_data.lst` and `val_data.lst` in `/multi-task-MXN
 
 ## pretrained model
 You can download pretrained model of ResNet50 from [Google Drive](https://drive.google.com/open?id=0ByXcv9gLjrVcVkQxMVAzcklQU00).
-Put this resnet-50-0000.params in `pretrained_model/` file.
+Put this `resnet-50-0000.params` in `pretrained_model/` file.
 
 ## Train
  `train_multitask.sh` is the train script for you to start fine-tune quickly. You should open this script and change some configurations such as: --epoch, --model, --batch-size, --num-classes, --data-train, --data-val, --image-train, --image-cal, --num-examples, --lr, --gpus, --num-epoch, --save-result, --save-name.
